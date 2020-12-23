@@ -6,6 +6,6 @@
 module.exports = app => {
   const { router, controller } = app;
 
-  router.get('/homegoods', controller.home.homegoods);//首页的商品 默认50条
+  router.get('/goods1', controller.home.goods1);//首页的商品 默认50条
  
 };
