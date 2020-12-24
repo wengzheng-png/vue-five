@@ -8,6 +8,8 @@ import 'element-ui/lib/theme-chalk/index.css';//ui框架的引入
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = Axios
+
+
 Vue.use(ElementUI); //ui的注入
 new Vue({
   router,
