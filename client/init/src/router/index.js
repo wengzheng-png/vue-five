@@ -1,17 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import App from "../App.vue"
-import Show from "../views/wzview/Show.vue"
+
+// import App from "../App.vue"
+
 import Hotel from "../views/wzview/Hotel.vue"
+
+import Home from "@/./views/zmview/Home.vue"
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path:"/",
-    component:App,
-    children:[
-    
+    name:Home,
+    component: Home,
+  },
     {
       path:"/note",
       component:()=>import("../views/wzview/Note.vue"),
@@ -19,7 +23,7 @@ const routes = [
     },
     {
       path:"show",
-      component:Show,
+      component:()=>import("../views/wzview/Show.vue"),
     },
     {
       path:"/he",
@@ -27,19 +31,27 @@ const routes = [
      
     },
     {
-      path:"hotel",
+      path:"/hotel",
       component:Hotel,
     },
     {
-      path:"hotelinfo",
+      path:"/hotelinfo",
       component:()=>import("../views/wzview/Hotelinfo.vue")
     },
-  ]
-
+   {
+    path:'/gonglue',
+    component: ()=>import("../views/zmview/Gonglue.vue"),
   },
-  
 
 ]
+  
+
+ 
+   
+   
+
+   
+
 
 const router = new VueRouter({
   mode: 'history',
