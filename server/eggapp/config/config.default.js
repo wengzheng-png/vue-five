@@ -24,9 +24,18 @@ module.exports = appInfo => {
   origin: 'http://192.168.2.114:8081',
   allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   };
+
+  //开启文件模式
   config.multipart = {
   mode: 'file',
    };
+   
+   //关闭post的安全验证
+  config.security = {
+    csrf: {
+      enable: false
+    }
+  };
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1607422295884_4462';
 
