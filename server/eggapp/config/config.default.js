@@ -21,8 +21,14 @@ module.exports = appInfo => {
   }
   };
   config.cors = {
+<<<<<<< HEAD
   origin: 'http://192.168.2.111:8080',
   allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+=======
+  origin: 'http://192.168.2.113:8080',
+  // origin: 'http://192.168.50.199:8080',
+  credentials: true
+>>>>>>> 1c4c541c69a607c46c15e463f5c05e9fd6e0ac53
   };
 
   //开启文件模式

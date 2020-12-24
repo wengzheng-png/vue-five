@@ -6,11 +6,13 @@ import Home from "@/./views/zmview/Home.vue"
 Vue.use(VueRouter)
 
 const routes = [
+  /* 首页 */
   {
     path: '/',
     name:Home,
     component: Home,
    },
+<<<<<<< HEAD
    {
     path: "/themetour",
     component: () => import("@/views/Themetour.vue")
@@ -71,6 +73,13 @@ const routes = [
       path: "/myOrder",
       component: () => import("@/views/MyOrder.vue")
     },
+=======
+   /* gonglue 攻略 */
+   {
+    path: '/gonglue',
+    component: ()=>import("../views/zmview/Gonglue.vue"),
+   }
+>>>>>>> 1c4c541c69a607c46c15e463f5c05e9fd6e0ac53
 ]
 
 const router = new VueRouter({

@@ -97,6 +97,7 @@
         <router-link to="#?"  class="daohang_items">主题游<div class="daosanjia_none"></div></router-link>
         <router-link to="#?"  class="daohang_items">私人订制<div class="daosanjia_none"></div></router-link>
         <router-link to="#?"  class="daohang_items">目的地<div class="daosanjia_none"></div></router-link>
+        <router-link to="/gonglue"  class="daohang_items">攻略<div class="daosanjia_none"></div></router-link>
         <router-link to="#?"  class="daohang_items">游记<div class="daosanjia_none"></div></router-link>
         <router-link to="#?"  class="daohang_items">酒店代购<div class="daosanjia_none"></div></router-link>
         <router-link to="#?"  class="daohang_items">景点门票<div class="daosanjia_none"></div></router-link>

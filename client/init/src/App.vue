@@ -46,7 +46,7 @@ li {
   min-width: 1200px;
   height: 200px;
   a {
-    font-weight: bold;
+    font-weight: 400;
     color: rgba(41, 40, 40, 0.979);
 
     &.router-link-exact-active {
