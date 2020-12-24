@@ -17,12 +17,12 @@ const routes = [
     component: Home,
   },
     {
-      path:"/note",
+      path:"/notes",
       component:()=>import("../views/wzview/Note.vue"),
      
     },
     {
-      path:"show",
+      path:"/show",
       component:()=>import("../views/wzview/Show.vue"),
     },
     {

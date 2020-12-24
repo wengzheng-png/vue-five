@@ -83,7 +83,7 @@ export default {
       fn(e){
         // var datee = e.target.innerHTML
         console.log(66666);
-        this.$axios.get("/note?",{params:{"uid":e.target.innerHTML}}).then((res)=>{this.arr = res.data;})
+        this.$axios.get("/note",{params:{"uid":e.target.innerHTML}}).then((res)=>{this.arr = res.data;})
        
       }
   },
