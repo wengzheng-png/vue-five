@@ -21,8 +21,9 @@ module.exports = appInfo => {
   }
   };
   config.cors = {
-  origin: 'http://192.168.2.114:8081',
-  allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  origin: 'http://192.168.2.113:8080',
+  // origin: 'http://192.168.50.199:8080',
+  credentials: true
   };
   config.multipart = {
   mode: 'file',
