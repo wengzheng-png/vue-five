@@ -21,7 +21,7 @@ module.exports = appInfo => {
   }
   };
   config.cors = {
-  origin: 'http://192.168.2.114:8081',
+  origin: 'http://192.168.2.111:8080',
   allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   };
 
