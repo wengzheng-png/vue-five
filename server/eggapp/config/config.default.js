@@ -21,7 +21,7 @@ module.exports = appInfo => {
   }
   };
   config.cors = {
-  origin: 'http://localhost:8081',
+  origin: 'http://127.0.0.1:8081',
   // origin: 'http://192.168.50.199:8080',
   credentials: true
   };
