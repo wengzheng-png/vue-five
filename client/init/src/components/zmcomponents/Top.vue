@@ -27,8 +27,8 @@
         <!-- 登录注册 -->
         <ul class="login">
           <li>个人中心</li>
-          <li>登录</li>
-          <li>免费注册</li>
+          <li><router-link to="/login">登录</router-link></li>
+          <li><router-link to="/register">免费注册</router-link></li>
           <li class="el-icon-search">订单详情</li>
           <li class="el-icon-menu daohang">
             网站导航
@@ -36,7 +36,7 @@
               <router-link to="#" class="daohangxiala">活动</router-link>
               <router-link to="#" class="daohangxiala">主题游</router-link>
               <router-link to="#" class="daohangxiala">私人订制</router-link>
-              <router-link to="/place" class="daohangxiala">目的地</router-link>
+              <router-link to="#" class="daohangxiala">目的地</router-link>
               <router-link to="#" class="daohangxiala">攻略</router-link>
               <router-link to="#" class="daohangxiala">游记</router-link>
               <router-link to="#" class="daohangxiala">酒店代订</router-link>
@@ -96,7 +96,7 @@
         <router-link to="/he"  class="daohang_items">活动<div class="daosanjia_none"></div></router-link>
         <router-link to="#?"  class="daohang_items">主题游<div class="daosanjia_none"></div></router-link>
         <router-link to="#?"  class="daohang_items">私人订制<div class="daosanjia_none"></div></router-link>
-        <router-link to="#?"  class="daohang_items">目的地<div class="daosanjia_none"></div></router-link>
+        <router-link to="/place"  class="daohang_items">目的地<div class="daosanjia_none"></div></router-link>
         <router-link to="/gonglue"  class="daohang_items">攻略<div class="daosanjia_none"></div></router-link>
         <router-link to="/notes"  class="daohang_items">游记<div class="daosanjia_none"></div></router-link>
         <router-link to="/hotel"  class="daohang_items">酒店代购<div class="daosanjia_none"></div></router-link>
