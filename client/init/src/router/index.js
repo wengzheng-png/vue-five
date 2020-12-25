@@ -1,16 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
+// import App from "../App.vue"
+
+import Hotel from "../views/wzview/Hotel.vue"
+
 import Home from "@/./views/zmview/Home.vue"
 
 
 Vue.use(VueRouter)
 
 const routes = [
-  /* 首页 */
   {
-    path: '/',
+    path:"/",
     name:Home,
     component: Home,
+<<<<<<< HEAD
    },
    {
     path: "/themetour",//主题游
@@ -77,11 +82,72 @@ const routes = [
       component: () => import("@/views/yrview/DriveCar.vue")
     },
    /* gonglue 攻略 */
+=======
+  },
+    {
+      path:"/notes",
+      component:()=>import("../views/wzview/Note.vue"),
+     
+    },
+    {
+      path:"/show",
+      component:()=>import("../views/wzview/Show.vue"),
+    },
+    {
+      path:"/he",
+      component:()=>import("../components/wzcomponents/Headlunbo.vue"),
+     
+    },
+    {
+      path:"/hotel",
+      component:Hotel,
+    },
+    {
+      path:"/hotelinfo",
+      component:()=>import("../views/wzview/Hotelinfo.vue")
+    },
+>>>>>>> da6ce5059984f3927cb6db86ed96d9480bb6a4ca
    {
-    path: '/gonglue',
+    path:'/gonglue',
     component: ()=>import("../views/zmview/Gonglue.vue"),
-   }
+  },
+  // 注册
+  {
+    path: '/register',
+    component: () => import('@/views/wsview/Register.vue')
+  },
+  {
+    path: '/login',
+    component: () => import('@/views/wsview/Login.vue')
+  },
+  // 验证码路由接口
+  {
+    path: '/verif',
+    component: () => import('@/views/wsview/Verif.vue')
+  },
+  {
+    path: '/forgetpwd',
+    component: () => import('@/views/wsview/Forgetpwd.vue')
+  },
+  {
+    path: '/place',
+    component: () => import('@/views/wsview/Place.vue')
+  },
+  {
+    path: '/toplace',
+    component: () => import('@/views/wsview/Toplace.vue')
+  }
+
+
 ]
+  
+
+ 
+   
+   
+
+   
+
 
 const router = new VueRouter({
   mode: 'history',
