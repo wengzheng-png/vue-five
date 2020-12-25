@@ -19,5 +19,9 @@ module.exports = app => {
   router.get('/hotel', controller.zmhome.hotel);//酒店模块的商品 
   /* 门票 */
   router.get('/piao', controller.zmhome.piao);//门票模块的商品 
+
+  //项目所需的接口
+  router.get('/', controller.user.index);  //注册
+  router.post('/register', controller.user.register);  //注册
  
 };

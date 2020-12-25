@@ -42,6 +42,11 @@ const routes = [
     path:'/gonglue',
     component: ()=>import("../views/zmview/Gonglue.vue"),
   },
+  // 注册
+  {
+    path: '/register',
+    component: () => import('@/views/wsview/Register.vue')
+  },
 
 ]
   
