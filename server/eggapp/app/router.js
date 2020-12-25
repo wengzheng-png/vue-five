@@ -30,4 +30,8 @@ module.exports = app => {
   router.get('/place', controller.place.place);   //目的地
   router.get('/search', controller.place.search);   //搜索去哪儿
  
+  router.get('/goodsitems', controller.yrhome.goodsitems);//主题游商品
+	router.get('/getVerif', controller.yrhome.getVerif);//验证码
+	router.post('/orderquery', controller.yrhome.orderQuery);//订单查询
+	router.post('/myorder', controller.yrhome.myorder);//我的订单
 };
