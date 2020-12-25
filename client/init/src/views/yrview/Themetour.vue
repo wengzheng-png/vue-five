@@ -10,77 +10,77 @@
     <div class="tour-item">
       <router-link to="/themeitem1" class="item-a">
         <div class="item">
-          <img src="@/assets/theme1.jpg" alt="" />
+          <img src="@/assets/yrimg/theme1.jpg" alt="" />
           <div class="item-text">元旦节旅行活动一览表</div>
           <div class="item-time">发布时间：2020-12-01</div>
         </div>
       </router-link>
       <router-link to="/themeitem2" class="item-a">
         <div class="item">
-          <img src="@/assets/theme2.jpg" alt="" />
+          <img src="@/assets/yrimg/theme2.jpg" alt="" />
           <div class="item-text">春节旅行活动一览表</div>
           <div class="item-time">发布时间：2020-01-01</div>
         </div>
       </router-link>
       <router-link to="/themeitem3" class="item-a">
         <div class="item">
-          <img src="@/assets/theme3.jpg" alt="" />
+          <img src="@/assets/yrimg/theme3.jpg" alt="" />
           <div class="item-text">清明节旅行活动一览表</div>
           <div class="item-time">发布时间：2020-05-01</div>
         </div>
       </router-link>
       <router-link to="/themeitem4" class="item-a">
         <div class="item">
-          <img src="@/assets/theme4.jpg" alt="" />
+          <img src="@/assets/yrimg/theme4.jpg" alt="" />
           <div class="item-text">五一节旅行活动一览表</div>
           <div class="item-time">发布时间：2020-04-01</div>
         </div>
       </router-link>
       <router-link to="/themeitem5" class="item-a">
         <div class="item">
-          <img src="@/assets/theme5.jpg" alt="" />
+          <img src="@/assets/yrimg/theme5.jpg" alt="" />
           <div class="item-text">端午节旅行活动一览表</div>
           <div class="item-time">发布时间：2020-03-01</div>
         </div>
       </router-link>
       <router-link to="/themeitem6" class="item-a">
         <div class="item">
-          <img src="@/assets/theme6.jpg" alt="" />
+          <img src="@/assets/yrimg/theme6.jpg" alt="" />
           <div class="item-text">中秋节旅行活动一览表</div>
           <div class="item-time">发布时间：2020-06-01</div>
         </div>
       </router-link>
       <router-link to="/themeitem7" class="item-a">
         <div class="item">
-          <img src="@/assets/theme7.jpg" alt="" />
+          <img src="@/assets/yrimg/theme7.jpg" alt="" />
           <div class="item-text">国庆节旅行活动一览表</div>
           <div class="item-time">发布时间：2020-08-01</div>
         </div>
       </router-link>
       <router-link to="/themeitem8" class="item-a">
         <div class="item">
-          <img src="@/assets/theme8.jpg" alt="" />
+          <img src="@/assets/yrimg/theme8.jpg" alt="" />
           <div class="item-text">春暖花开活动一览表</div>
           <div class="item-time">发布时间：2020-01-01</div>
         </div>
       </router-link>
       <router-link to="/themeitem9" class="item-a">
         <div class="item">
-          <img src="@/assets/theme9.jpg" alt="" />
+          <img src="@/assets/yrimg/theme9.jpg" alt="" />
           <div class="item-text">暑假嗨游旅行活动一览表</div>
           <div class="item-time">发布时间：2020-06-01</div>
         </div>
       </router-link>
       <router-link to="/themeitem10" class="item-a">
         <div class="item">
-          <img src="@/assets/theme10.jpg" alt="" />
+          <img src="@/assets/yrimg/theme10.jpg" alt="" />
           <div class="item-text">金秋彩林旅行活动一览表</div>
           <div class="item-time">发布时间：2020-09-01</div>
         </div>
       </router-link>
       <router-link to="/themeitem11" class="item-a">
         <div class="item">
-          <img src="@/assets/theme11.jpg" alt="" />
+          <img src="@/assets/yrimg/theme11.jpg" alt="" />
           <div class="item-text">冬游川西旅行活动一览表</div>
           <div class="item-time">发布时间：2020-10-01</div>
         </div>
@@ -90,7 +90,8 @@
 </template> 
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style scoped>

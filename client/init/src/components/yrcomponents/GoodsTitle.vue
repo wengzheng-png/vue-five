@@ -35,7 +35,7 @@
   width: 187px;
   height: 48px;
   vertical-align: top;
-  background-image: url("../assets/theme-jingling.png");
+  background-image: url("../../assets/yrimg/theme-jingling.png");
 }
 .theme2-title-img2 {
   background-position: 0 -23px;

@@ -30,7 +30,7 @@ export default {
   width: 80px;
   height: 47px;
   vertical-align: middle;
-  background-image: url("../assets/theme-jingling.png");
+  background-image: url("../../assets/yrimg/theme-jingling.png");
 }
 .theme1-title-img2 {
   background-position: -83px -129px;

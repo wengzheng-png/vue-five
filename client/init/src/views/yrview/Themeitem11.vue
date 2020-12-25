@@ -1,6 +1,7 @@
 <template>
   <div class="themeItem">
-    <img src="@/assets/theme11-11.jpg" alt="" class="topimg" />
+    <Top1></Top1>
+    <img src="@/assets/yrimg/theme11-11.jpg" alt="" class="topimg" />
      <div class="theme1">
       <NavTitle :navtitle="arr6[10]"></NavTitle>
       <ThemeText :text="arr5[10]"></ThemeText>
