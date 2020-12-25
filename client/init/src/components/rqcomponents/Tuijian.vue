@@ -118,7 +118,6 @@ li {
   margin: 30px auto;
   color: rgb(43, 40, 40);
   border-radius: 20px;
-  
 }
 li:hover {
   background-color: #fff;
