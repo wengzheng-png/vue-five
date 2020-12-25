@@ -16,7 +16,12 @@ const routes = [
    {
     path: '/gonglue',
     component: ()=>import("../views/zmview/Gonglue.vue"),
-   }
+   },
+   /* 攻略详情页 */
+    {
+      path: '/walkthrough',
+      component: ()=>import("../views/zmview/WalkthroughDetails.vue"),
+     }
 ]
 
 const router = new VueRouter({

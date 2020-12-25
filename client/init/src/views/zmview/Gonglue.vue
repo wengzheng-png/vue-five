@@ -37,7 +37,7 @@
               </div>
             </div>
             <!-- 跳转到游记 -->
-            <router-link to="#" class="mengceng">
+            <router-link to="walkthrough?keyword=九寨沟" class="mengceng">
               <div class="mengceng1">
                 奶爸萌娃“大闹”明孝陵，亲子游应该这么玩
               </div>
