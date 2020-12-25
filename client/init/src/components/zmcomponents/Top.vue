@@ -36,7 +36,7 @@
               <router-link to="#" class="daohangxiala">活动</router-link>
               <router-link to="#" class="daohangxiala">主题游</router-link>
               <router-link to="#" class="daohangxiala">私人订制</router-link>
-              <router-link to="#" class="daohangxiala">目的地</router-link>
+              <router-link to="/place" class="daohangxiala">目的地</router-link>
               <router-link to="#" class="daohangxiala">攻略</router-link>
               <router-link to="#" class="daohangxiala">游记</router-link>
               <router-link to="#" class="daohangxiala">酒店代订</router-link>

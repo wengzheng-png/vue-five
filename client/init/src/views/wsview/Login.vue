@@ -59,11 +59,11 @@
                 }
                this.$axios.post(url,data,{withCredentials: true})
                 .then((res)=>{
-                    console.log(res);
+                    // console.log(res);
                     // 前端收到后端返回的数据标识，进行判断
                     if(res.data.code==2003){
                         // 登录成功跳转页面   需要应该路由守卫
-                        this.$router.push("/home")
+                        this.$router.push("/")
                     }else if(res.data.code==4003){
                         // 登录失败   提示用户账号或者密码错误
                         alert("账号或者密码错误!!!!")
