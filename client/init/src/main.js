@@ -20,15 +20,12 @@ const store=new Vuex.Store({
 
 Vue.prototype.$axios = Axios
 //注册baseURL  （zm）
-<<<<<<< HEAD
-Axios.defaults.baseURL="http://192.168.2.111:7001"
-=======
+// Axios.defaults.baseURL="http://192.168.2.111:7001"
 // Axios.defaults.baseURL="http://127.0.0.1:7001"
 // Axios.defaults.baseURL="http://192.168.50.199:7001"
 
 Axios.defaults.baseURL="http://192.168.2.165:7001"   //ws
 
->>>>>>> da6ce5059984f3927cb6db86ed96d9480bb6a4ca
 Axios.defaults.withCredentials=true;
 
 Vue.config.productionTip = false

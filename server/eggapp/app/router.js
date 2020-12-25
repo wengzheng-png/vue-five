@@ -22,6 +22,7 @@ module.exports = app => {
 
   //项目所需的接口
   router.get('/', controller.user.index);  //注册
+  
   //项目所需的接口
   router.post('/register', controller.user.register);  //注册
   router.get('/verif', controller.user.verif);      //验证码
