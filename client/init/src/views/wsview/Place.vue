@@ -14,7 +14,12 @@
     </div>
 
     <h1 class="alltext">全部目的地</h1>
-    <div class="allplace"></div>
+    <div class="allplace hotplace">
+       <div class="box" v-for="el in placearr" :key="el.id" @click="toPlace(el.id)">
+          <img :src="el.img" alt="图片加载失败" />
+          <h4 v-html="el.name"></h4>
+      </div> 
+    </div>
   </div>
 </template>
 
