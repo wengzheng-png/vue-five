@@ -91,7 +91,7 @@ export default {
       this.$axios.post(url, data)
       .then((res) => {
         if (res.data.code == 2001) {
-          this.$router.push("/");   //路由跳转  先跳到首页
+          this.$router.push("/login");   //路由跳转  先跳到首页
         } else {
           alert("手机号码已被注册过！请重新注册");
         }

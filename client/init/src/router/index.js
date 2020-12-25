@@ -47,6 +47,28 @@ const routes = [
     path: '/register',
     component: () => import('@/views/wsview/Register.vue')
   },
+  {
+    path: '/login',
+    component: () => import('@/views/wsview/Login.vue')
+  },
+  // 验证码路由接口
+  {
+    path: '/verif',
+    component: () => import('@/views/wsview/Verif.vue')
+  },
+  {
+    path: '/forgetpwd',
+    component: () => import('@/views/wsview/Forgetpwd.vue')
+  },
+  {
+    path: '/place',
+    component: () => import('@/views/wsview/Place.vue')
+  },
+  {
+    path: '/toplace',
+    component: () => import('@/views/wsview/Toplace.vue')
+  }
+
 
 ]
   

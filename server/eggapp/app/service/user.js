@@ -15,26 +15,26 @@ class UserService extends Service {
     return data;
   }
 
-  // // 登陆
-  // async login(obj) {
-  //   const sql=`select * from myuser where tel="${obj.tel}"&&pwd="${obj.pwd}"`
-  //   const data = await this.app.mysql.query(sql);
-  //   return data;
-  // }
+  // 登陆
+  async login(obj) {
+    const sql=`select * from myuser where tel="${obj.tel}"&&pwd="${obj.pwd}"`
+    const data = await this.app.mysql.query(sql);
+    return data;
+  }
 
-  // // 修改密码  先判断有没有账号
-  // async istel(tel) {
-  //   const sql=`select * from myuser where tel="${tel}"`
-  //   console.log(sql,11111);
-  //   const data = await this.app.mysql.query(sql);
-  //   console.log(data,999999999999999999);
-  //   return data;
-  // }
-  // async forgetpwd(obj) {
-  //   const sql=`update myuser set pwd="${obj.newpwd}" where tel="${obj.tel}"`
-  //   const data = await this.app.mysql.query(sql);
-  //   return data;
-  // }
+  // 修改密码  先判断有没有账号
+  async istel(tel) {
+    const sql=`select * from myuser where tel="${tel}"`
+    console.log(sql,11111);
+    const data = await this.app.mysql.query(sql);
+    console.log(data,999999999999999999);
+    return data;
+  }
+  async forgetpwd(obj) {
+    const sql=`update myuser set pwd="${obj.newpwd}" where tel="${obj.tel}"`
+    const data = await this.app.mysql.query(sql);
+    return data;
+  }
 
   
 

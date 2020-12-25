@@ -22,6 +22,12 @@ module.exports = app => {
 
   //项目所需的接口
   router.get('/', controller.user.index);  //注册
+  //项目所需的接口
   router.post('/register', controller.user.register);  //注册
+  router.get('/verif', controller.user.verif);      //验证码
+  router.post('/login', controller.user.login);   //登陆
+  router.post('/forgetpwd', controller.user.forgetpwd);  //忘记密码
+  router.get('/place', controller.place.place);   //目的地
+  router.get('/search', controller.place.search);   //搜索去哪儿
  
 };
