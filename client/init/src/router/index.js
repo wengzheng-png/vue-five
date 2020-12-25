@@ -12,7 +12,7 @@ const routes = [
     name:Home,
     component: Home,
    },
-   /* gonglue 攻略 */
+   /* 攻略 */
    {
     path: '/gonglue',
     component: ()=>import("../views/zmview/Gonglue.vue"),
