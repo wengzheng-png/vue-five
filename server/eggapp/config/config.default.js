@@ -21,7 +21,11 @@ module.exports = appInfo => {
   }
   };
   config.cors = {
+<<<<<<< HEAD
   // origin: 'http://localhost:8081',
+=======
+  origin: 'http://127.0.0.1:8081',
+>>>>>>> c4914cfe2b7dbb72e51d16f98c963705d4c942e6
   // origin: 'http://192.168.50.199:8080',
   origin: 'http://192.168.2.165:8080',  //ws
   credentials: true
