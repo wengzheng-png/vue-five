@@ -3,7 +3,6 @@
 <div class="box">
 <div class="tuijian">
   <h1>推荐景点</h1>
-  
     <ul>
       <router-link to="#" class="a"><li>温泉</li></router-link>
       <router-link to="#" class="a"><li>赏花</li></router-link>
@@ -18,11 +17,15 @@
 <div class="cont">
 
 <div class="biaoti">
-<span class="bspan" @mouseover="mouseover1">318国道</span>
-<span class="bspan" @mouseover="mouseover2">稻城亚丁</span>
-<span class="bspan" @mouseover="mouseover3">318川藏线</span>
-<span class="bspan" @mouseover="mouseover4">色达</span></div><router-link to="#" class="geng a">更多 ></router-link>
-<router-view></router-view>
+  <el-tabs v-model="activeName" @tab-click="change">
+    <el-tab-pane  label="318国道" name="first"></el-tab-pane>
+    <el-tab-pane  label="稻城亚丁" name="second"></el-tab-pane>
+    <el-tab-pane  label="318川藏线" name="third"></el-tab-pane>
+    <el-tab-pane  label="色达" name="fourth"></el-tab-pane>
+  </el-tabs>
+</div>
+<router-link to="#" class="geng a">更多 ></router-link>
+<component :is="cont" class="comp"></component>
 </div>
 </div>
   </div>
@@ -30,9 +33,31 @@
 
 <script>
   export default {
-    methods: {
-      
+    data() {
+      return {
+        cont:"Con1",
+        activeName: 'first',
+        }
     },
+    methods: {
+      change (){
+        if(this.activeName == 'first'){
+          this.cont1 = 'Con1';
+        }if(this.activeName == 'second'){
+          this.cont = 'Con2';
+        } if(this.activeName == 'first'){
+          this.cont = "Con3";
+        } if(this.activeName == 'fourth'){
+          this.cont = "Con4";
+        }
+      }
+    },
+    components:{
+    Con1:()=>import("./Con1"),
+    Con2:()=>import("./Con2"),
+    Con3:()=>import("./Con3"),
+    Con4:()=>import("./Con4")
+    }
   }
 </script>
 
@@ -44,22 +69,22 @@ a {
   width: 100%;
   height: 400px;
   position: relative;
-  top: 50px;
+  top: 75px;
 }
 
 .box{
   position: relative;
-  width: 1000px;
-  height: 450px;
-  background-color: pink;
+  width: 1200px;
+  height: 560px;
+  background-color: rgba(72, 119, 207, 0.2);
   margin: auto;
 }
 .tuijian{
   display: inline-block;
-  width: 280px;
-  background-color: rgb(236, 147, 147);
+  width: 300px;
   box-sizing: border-box;
-  height: 450px;
+  height: 560px;
+
 }
 
 ul,li{
@@ -74,9 +99,9 @@ h1{
 ul{
   display: block;
   background-image: url('../../../public/lightimg/tilbei.jpg');
-  background-size: 280px;
+  background-size: 280px 560px;
   background-repeat: no-repeat;
-  height: 363px;
+  height: 473px;
   padding-left: 0;
   margin-left: 15px;
   padding-top: 8px;
@@ -90,7 +115,7 @@ li {
   background-color:rgba(208, 202, 209, 0.7);
   text-align: center;
   line-height: 30px;
-  margin: 18px auto;
+  margin: 30px auto;
   color: rgb(43, 40, 40);
   border-radius: 20px;
   
@@ -101,14 +126,22 @@ li:hover {
 .cont {
   position: absolute;
   display: inline-block;
-  width: 600px;
-  background-color: #9943;
-  height: 450px;
-  margin-left:50px ;
+  width: 860px;
+  height: 560px;
+  margin-left:30px ;
 }
+
+.comp{
+height: 510px;
+  position: absolute; 
+  top: 45px;
+  left: 0;
+  background-color: #fff;
+} 
 
 .biaoti {
   width: 400px;
+  margin-left: 10px;
 }
 
 .biaoti span {
@@ -121,7 +154,6 @@ li:hover {
 .biaoti span:hover {
   text-decoration: underline;
   text-align: center;
-  color: rgb(233, 117, 50);
 }
 
 .geng{

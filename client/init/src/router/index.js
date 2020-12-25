@@ -23,6 +23,10 @@ const routes = [
     path: "/xiangqing",
     //components:()=>import('../views/rqview/Login.vue'),
     component:()=>import ("@/views/rqview/Xiangqing.vue")
+
+  },{
+    path: "/cont",
+    component:()=>import ("@/components/rqcomponents/Con1.vue")
   }
 
 ]

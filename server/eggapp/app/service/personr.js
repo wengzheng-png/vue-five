@@ -7,7 +7,7 @@ class HomeService extends Service {
   async longinrj(obj) {
     //赋值
     //sql语句查询
-    const sql=`SELECT * FROM user WHERE tel="${obj.tel}" and pwd="${obj.pwd}"`
+    const sql=`SELECT * FROM myuser WHERE tel="${obj.tel}" and pwd="${obj.pwd}"`
     const data = await this.app.mysql.query(sql);
     console.log(data);
     return data;
@@ -16,7 +16,7 @@ class HomeService extends Service {
   async personinfo(userid) {
     //赋值
     //sql语句查询
-    const sql=`SELECT * FROM user WHERE id="${userid}"`;
+    const sql=`SELECT * FROM myuser WHERE id="${userid}"`;
     const data = await this.app.mysql.query(sql);
     console.log(data,36253656);
     return data;
@@ -37,7 +37,7 @@ class HomeService extends Service {
   async headpic(obj,userid) {
     //赋值
     //sql语句更新数据
-    const sql=`UPDATE user SET nickname ="${obj.nickname}",label ="${obj.label}"   WHERE id="${userid}";`;
+    const sql=`UPDATE myuser SET nickname ="${obj.nickname}",label ="${obj.label}"   WHERE id="${userid}";`;
     const data = await this.app.mysql.query(sql);
     return data;
   };
