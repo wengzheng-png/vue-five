@@ -129,14 +129,9 @@ const routes = [
       path:"/hotelinfo",
       component:()=>import("../views/wzview/Hotelinfo.vue")
     },
-<<<<<<< HEAD
-=======
-// >>>>>>> aae6ed17e1aa1f35c4da29aeac4f85dd3e7eabdb
->>>>>>> b8303267174d6cff3002151b6a2c111f072283db
    {
     path:'/gonglue',
     component: ()=>import("../views/zmview/Gonglue.vue"),
-// <<<<<<< HEAD
    },
    /* 攻略详情页 */
     {
@@ -150,7 +145,7 @@ const routes = [
       path: '/walkthrough1',
       component: ()=>import("../views/zmview/WalkthroughDetails1.vue"),
      },
-// =======
+
   // },
   // 注册
   {
@@ -179,8 +174,6 @@ const routes = [
     component: () => import('@/views/wsview/Toplace.vue')
   }
 
-
-// >>>>>>> aae6ed17e1aa1f35c4da29aeac4f85dd3e7eabdb
 ]
   
 
