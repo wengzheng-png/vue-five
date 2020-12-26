@@ -19,8 +19,15 @@ const routes = [
    },
    /* 攻略详情页 */
     {
+      name:"Walkthrough",
       path: '/walkthrough',
       component: ()=>import("../views/zmview/WalkthroughDetails.vue"),
+     },
+      /* 攻略详情页 */
+    {
+      name:"Walkthrough1",
+      path: '/walkthrough1',
+      component: ()=>import("../views/zmview/WalkthroughDetails1.vue"),
      }
 ]
 

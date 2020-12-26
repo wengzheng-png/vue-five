@@ -2,7 +2,7 @@
   <div class="gonglue">
     <!-- 顶部轮播图 -->
     <el-carousel :interval="4000" type="card" height="200px" class="lunbo_box">
-      <el-carousel-item v-for="item in arr" :key="item">
+      <el-carousel-item v-for="item in arr" :key="item.id">
         <img :src="item.img" alt="" class="img_big" />
       </el-carousel-item>
     </el-carousel>
@@ -36,7 +36,7 @@
                 </div>
               </div>
             </div>
-            <!-- 跳转到游记 -->
+            <!-- 跳转到攻略详情页 -->
             <router-link to="walkthrough?keyword=九寨沟" class="mengceng">
               <div class="mengceng1">
                 奶爸萌娃“大闹”明孝陵，亲子游应该这么玩
@@ -65,7 +65,7 @@
               </div>
             </div>
             <!-- 跳转到游记 -->
-            <router-link to="#" class="mengceng3">
+            <router-link to="walkthrough?keyword=稻城亚丁" class="mengceng3">
               <div class="mengceng4">密云冰雪严寒依旧在，鲜花盛开为那般？</div>
               <div class="look_wanfa3"><span>查看玩法套餐</span></div>
             </router-link>
@@ -88,7 +88,7 @@
               </div>
             </div>
             <!-- 跳转到游记 -->
-            <router-link to="#" class="mengceng3">
+            <router-link to="walkthrough?keyword=若尔盖" class="mengceng3">
               <div class="mengceng4">冬日之旅，解锁不一样的星月大陆</div>
               <div class="look_wanfa3"><span>查看玩法套餐</span></div>
             </router-link>
@@ -124,9 +124,9 @@ export default {
     return {
       /* 注册组件 */
       arr: [
-        { img: img1, url: "/#?九寨沟" },
-        { img: img2, url: "九寨沟" },
-        { img: img3, url: "九寨沟" },
+        { img: img1,id:1,url: "/#?九寨沟" },
+        { img: img2,id:2,url: "九寨沟" },
+        { img: img3,id:3,url: "九寨沟" },
       ],
       /* 第一个商品盒子 */
       arr1: [

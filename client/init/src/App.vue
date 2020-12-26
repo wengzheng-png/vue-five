@@ -50,7 +50,7 @@ li {
     color: rgba(41, 40, 40, 0.979);
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #2577E3;
     }
     .router-link-active {
       text-decoration: none;
