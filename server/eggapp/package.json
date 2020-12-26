@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "taobao",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -26,8 +26,8 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-app",
-    "stop": "egg-scripts stop --title=egg-server-app",
+    "start": "egg-scripts start --daemon --title=egg-server-taobao",
+    "stop": "egg-scripts stop --title=egg-server-taobao",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
