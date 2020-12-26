@@ -33,6 +33,17 @@ module.exports = appInfo => {
   // origin: 'http://localhost:8081',
   // origin: 'http://192.168.50.199:8080',
   //origin: 'http://192.168.2.165:8080',  //ws
+
+  //origin: 'http://192.168.43.30:8080',
+  allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+
+// <<<<<<< HEAD
+  // origin: 'http://192.168.2.113:8081',
+  //origin: 'http://192.168.50.199:8080',
+
+  // origin: 'http://localhost:8081',
+  // origin: 'http://192.168.50.199:8080',
+  // origin: 'http://192.168.2.165:8080', 
   credentials: true
   };
 
@@ -41,7 +52,7 @@ module.exports = appInfo => {
   mode: 'file',
    };
 
- 
+  
    //关闭csrf
    config.security={
     csrf:{
@@ -65,9 +76,6 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
-  config.multipart = {
-  mode: 'file',
-   };
 
   return {
     ...config,

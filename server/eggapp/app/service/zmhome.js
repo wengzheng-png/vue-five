@@ -33,5 +33,13 @@ class HomeServiceService extends Service {
     var data = await this.app.mysql.query(sql);
     return data;
   }
+    /* 攻略详情 */
+    async WalkthroughDetails(keyword) {
+      // console.log(keyword);
+      //查询语句  记得去配置sql
+      const sql = `select * from walkthroughdetails where keyword = "${keyword}"`;
+      var data = await this.app.mysql.query(sql);
+      return data;
+    }
 }
 module.exports = HomeServiceService;

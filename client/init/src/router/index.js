@@ -35,6 +35,9 @@ const routes = [
     name:Home,
     component: Home,
    },
+// <<<<<<< HEAD
+   /* 攻略 */
+// =======
    {
     path: "/themetour",//主题游
     component: () => import("@/views/yrview/Themetour.vue")
@@ -99,6 +102,10 @@ const routes = [
       path: "/drivecar",//租车自驾
       component: () => import("@/views/yrview/DriveCar.vue")
     },
+    {
+      path:"/carorder",//租车详情
+      component: () => import("@/views/yrview/CarOrder.vue")
+    },
    /* gonglue 攻略 */
     {
       path:"/notes",
@@ -122,10 +129,29 @@ const routes = [
       path:"/hotelinfo",
       component:()=>import("../views/wzview/Hotelinfo.vue")
     },
+<<<<<<< HEAD
+=======
+// >>>>>>> aae6ed17e1aa1f35c4da29aeac4f85dd3e7eabdb
+>>>>>>> b8303267174d6cff3002151b6a2c111f072283db
    {
     path:'/gonglue',
     component: ()=>import("../views/zmview/Gonglue.vue"),
-  },
+// <<<<<<< HEAD
+   },
+   /* 攻略详情页 */
+    {
+      name:"Walkthrough",
+      path: '/walkthrough',
+      component: ()=>import("../views/zmview/WalkthroughDetails.vue"),
+     },
+      /* 攻略详情页 */
+    {
+      name:"Walkthrough1",
+      path: '/walkthrough1',
+      component: ()=>import("../views/zmview/WalkthroughDetails1.vue"),
+     },
+// =======
+  // },
   // 注册
   {
     path: '/register',
@@ -154,6 +180,7 @@ const routes = [
   }
 
 
+// >>>>>>> aae6ed17e1aa1f35c4da29aeac4f85dd3e7eabdb
 ]
   
 
