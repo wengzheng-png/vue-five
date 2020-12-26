@@ -1,6 +1,6 @@
 <template>
   <div class="box1">
-    <router-link to="gonglue" class="gonglue">攻略<<<</router-link>
+    <router-link to="gonglue" class="gonglue">攻略</router-link>
     <div v-for="el in arr" :key="el.id" class="box2">
       <!-- 头像框 -->
       <div class="box3">

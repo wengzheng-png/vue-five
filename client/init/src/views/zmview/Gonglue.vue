@@ -8,7 +8,7 @@
     </el-carousel>
     <div class="center">
       <!-- ======================================================================================== -->
-      <router-link to="/" class="goshouye">首页<<<</router-link>
+      <router-link to="/" class="goshouye">首页</router-link>
       <div class="tehui">达人玩法</div>
       <!-- ======================================================================================== -->
       <div class="wanfa_flex">
