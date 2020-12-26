@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0a5501"],{"09bd":function(e,t,n){"use strict";n.r(t);var r=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("router-link",{attrs:{to:"/orderquery"}},[e._v("预订页面")])],1)},u=[],a={},o=a,c=n("2877"),s=Object(c["a"])(o,r,u,!1,null,"66fe33a2",null);t["default"]=s.exports}}]);
+//# sourceMappingURL=chunk-2d0a5501.b65083e7.js.map

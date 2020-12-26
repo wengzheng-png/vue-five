@@ -1,5 +1,6 @@
 <template>
   <div class="top">
+    <link rel="shortcut icon" href="../../../public/favicon.ico">
     <!-- 顶部第一个导航栏  -->
     <div class="center">
       <span class="left"

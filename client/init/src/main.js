@@ -21,7 +21,7 @@ const store=new Vuex.Store({
 })
 
 //冉菁的ip地址
-Axios.defaults.baseURL = "http://192.168.43.62:7001"
+// Axios.defaults.baseURL = "http://192.168.43.62:7001"
 
 Axios.defaults.withCredentials = true;
 
