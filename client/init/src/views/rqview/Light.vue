@@ -1,6 +1,6 @@
 <template>
     <div>
-<h1>景点门票</h1>
+
 <Lunbo></Lunbo>
 <div class="toshou"><router-link to="/" class="shou">首页</router-link> &nbsp;&nbsp;>&nbsp;&nbsp;<span class="jing">景点门票</span> </div>
 <Menpiao></Menpiao>

@@ -43,11 +43,16 @@
       change (){
         if(this.activeName == 'first'){
           this.cont1 = 'Con1';
+          console.log(this.activeName);
         }if(this.activeName == 'second'){
           this.cont = 'Con2';
-        } if(this.activeName == 'first'){
+          console.log(this.activeName);
+
+        } if(this.activeName == 'third'){
+          console.log(this.activeName);
           this.cont = "Con3";
         } if(this.activeName == 'fourth'){
+          console.log(this.activeName);
           this.cont = "Con4";
         }
       }
@@ -67,17 +72,19 @@ a {
 }
 .bigbox{
   width: 100%;
-  height: 400px;
+  height: 650px;
   position: relative;
   top: 75px;
 }
 
 .box{
   position: relative;
-  width: 1200px;
+  width: 1210px;
   height: 560px;
   background-color: rgba(72, 119, 207, 0.2);
   margin: auto;
+  border: 1px solid #ccc;
+
 }
 .tuijian{
   display: inline-block;
@@ -131,7 +138,7 @@ li:hover {
 }
 
 .comp{
-height: 510px;
+  height: 510px;
   position: absolute; 
   top: 45px;
   left: 0;

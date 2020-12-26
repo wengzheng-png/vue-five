@@ -53,7 +53,7 @@ class HomeService extends Service {
     let newpath = __dirname + "/../public/headpic/" + txt;
     fs.renameSync(oldpath,newpath);
     //赋值
-    let  headpic1 = "http://192.168.2.17:7001/public/headpic/" + txt;
+    let  headpic1 = "http://192.168.43.83:7001/public/headpic/" + txt;
     this.ctx.session.headimg = headpic1;
   console.log(this.ctx.session.headimg,666);
     //sql语句插入

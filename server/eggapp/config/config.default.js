@@ -27,9 +27,13 @@ module.exports = appInfo => {
   
   //允许跨域
   config.cors = {
-  origin: 'http://192.168.2.17:8080',
-  credentials:true
+  origin: 'http://192.168.43.83:8080',
+  //credentials:true
   //allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  // origin: 'http://localhost:8081',
+  // origin: 'http://192.168.50.199:8080',
+  //origin: 'http://192.168.2.165:8080',  //ws
+  credentials: true
   };
 
   //允许上传文件
@@ -37,11 +41,19 @@ module.exports = appInfo => {
   mode: 'file',
    };
 
-   //关闭csrf 关闭安全验证
-  config.security={
+ 
+   //关闭csrf
+   config.security={
     csrf:{
       enable:false
     }
+  }
+// 缓存
+  config.session = {
+    key: 'HQYJ_SSION',
+    maxAge: 24 * 3600 * 1000, // 1 天
+    httpOnly: true,
+    encrypt: true,
   };
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1607422295884_4462';
@@ -53,6 +65,9 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
+  config.multipart = {
+  mode: 'file',
+   };
 
   return {
     ...config,

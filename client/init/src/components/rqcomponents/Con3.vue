@@ -33,6 +33,8 @@ data() {
   position: absolute;
   top: 50px;
   left: 10px;
+  width: 870px;
+
 }
 .case{
   width: 200px;

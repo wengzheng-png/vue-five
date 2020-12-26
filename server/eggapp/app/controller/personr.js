@@ -2,18 +2,7 @@
 const Controller = require('egg').Controller;
 class HomeController extends Controller {
   
-   //登录
-   async longinrj() {
-    const { ctx } = this;
-    let res = await this.ctx.service.personr.longinrj(this.ctx.request.body);
-    if (res[0]){
-      this.ctx.session.tel = this.ctx.request.body.tel;
-      this.ctx.session.userid = res[0].id;
-      this.ctx.body = {code:2002,info:"登陆成功"}
-    }else{
-      this.ctx.body = {code:4002,info:"邮箱或密码错误"}
-    }
-  };
+ 
 
   //用户信息
   async personinfo() {

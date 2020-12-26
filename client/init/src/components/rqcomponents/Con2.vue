@@ -33,6 +33,8 @@ data() {
   position: absolute;
   top: 50px;
   left: 10px;
+  width: 870px;
+
 }
 .case{
   width: 200px;
@@ -51,10 +53,11 @@ float: right;
   margin: auto;
   margin-top:10px;
   cursor: pointer;  
- transition: all 0.6s;  
+
 }
 
 .img:hover {
+   transition: all 0.6s;  
   transform: scale(1.1);  
 }
 
