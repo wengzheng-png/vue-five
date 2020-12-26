@@ -26,9 +26,9 @@
         </div>
         <!-- 登录注册 -->
         <ul class="login">
-          <li>个人中心</li>
-          <li>登录</li>
-          <li>免费注册</li>
+          <li><router-link to="/personinfo">个人中心</router-link></li>
+          <li><router-link to="/login">登录</router-link></li>
+          <li><router-link to="/register">免费注册</router-link></li>
           <li class="el-icon-search">订单详情</li>
           <li class="el-icon-menu daohang">
             网站导航
@@ -71,11 +71,14 @@
           <input
             class="input1"
             type="text"
-            placeholder="九寨沟"
+            :placeholder="this.$store.state.search"
             v-model="place"
             @focus="inputFocus"
+            @change="change1"
+            @keyup.enter="inputenter"
+            ref="inp"
           />
-          <el-button type="primary" icon="el-icon-search" @click="search"
+          <el-button type="primary" icon="el-icon-search" @click="inputenter"
             >搜索</el-button
           >
           <!-- input搜索框下拉菜单 -->
@@ -92,15 +95,18 @@
     <!-- 顶部第二个导航栏 -->
     <div class="daohanglan">
       <div class="daohanglan_box" @click="shouye">
-        <router-link to="#?"  class="daohang_items" style="backgroundColor:#0a56bb">首页<div class="daosanjia_none" style="display: block"></div></router-link>
+<!-- <<<<<<< HEAD -->
+        <router-link to="/"  class="daohang_items" style="backgroundColor:#0a56bb">首页<div class="daosanjia_none" style="display: block"></div></router-link>
         <router-link to="/he"  class="daohang_items">活动<div class="daosanjia_none"></div></router-link>
-        <router-link to="#?"  class="daohang_items">主题游<div class="daosanjia_none"></div></router-link>
-        <router-link to="#?"  class="daohang_items">私人订制<div class="daosanjia_none"></div></router-link>
-        <router-link to="#?"  class="daohang_items">目的地<div class="daosanjia_none"></div></router-link>
+        <router-link to="themetour?"  class="daohang_items">主题游<div class="daosanjia_none"></div></router-link>
+        <router-link to="show?aid=2"  class="daohang_items">私人订制<div class="daosanjia_none"></div></router-link>
+        <router-link to="/place"  class="daohang_items">目的地<div class="daosanjia_none"></div></router-link>
         <router-link to="/gonglue"  class="daohang_items">攻略<div class="daosanjia_none"></div></router-link>
         <router-link to="/notes"  class="daohang_items">游记<div class="daosanjia_none"></div></router-link>
         <router-link to="/hotel"  class="daohang_items">酒店代购<div class="daosanjia_none"></div></router-link>
-        <router-link to="#?"  class="daohang_items">景点门票<div class="daosanjia_none"></div></router-link>
+        <router-link to="/light"  class="daohang_items">景点门票<div class="daosanjia_none"></div></router-link>
+        <router-link to="/drivecar"  class="daohang_items">租车自驾<div class="daosanjia_none"></div></router-link>
+<!-- >>>>>>> aae6ed17e1aa1f35c4da29aeac4f85dd3e7eabdb -->
       </div>
     </div>
   </div>
@@ -114,6 +120,7 @@ export default {
       n1: true,
       n2: false,
       place: "",
+      search1: "",
       arr: [
         {
           text: "模架杨燕vivi1小时前评论了",
@@ -155,15 +162,36 @@ export default {
     },
     //选中时单个按钮改变样式
     shouye(e) {
-      var arr = e.currentTarget.children
+      var arr = e.currentTarget.children;
       for (let i = 0; i < arr.length; i++) {
-       arr[i].style.backgroundColor= " #2577e3";
-       arr[i].children[0].style="display: none";
-      }     
-      e.target.style.backgroundColor= "#0a56bb";
-      e.target.children[0].style="display: block";
+        arr[i].style.backgroundColor = " #2577e3";
+        arr[i].children[0].style = "display: none";
+      }
+      e.target.style.backgroundColor = "#0a56bb";
+      e.target.children[0].style = "display: block";
+    },
+    /* 搜索框搜索事件 */
+    change1(e) {
+      this.search1 = this.$store.state.search;
+      this.$store.state.search = this.place;
+    },
+    /* 搜索框按下enter后网络请求并跳转页面 */
+    inputenter(e){
+      this.$store.state.search = this.place;
+      if(this.place == "九寨沟"||this.place == "稻城亚丁"||this.place == "色达"||this.place == "四姑娘山"||this.place == "若尔盖"||this.place == "毕棚沟"||this.place == "牛背山"||this.place == "冷嘎措"||this.place == "318川藏线"){
+       this.$router.push({
+          path: "/walkthrough",
+          query: { keyword: this.$store.state.search },
+        });}else {
+           this.$router.push({
+          path: "/walkthrough1"
+        })
+        }
     },
   },
+  mounted() {},
+    // watch:{search1(){}} //x就是监听了data中的x属性的一个监听器
+  
 };
 </script>
 
@@ -222,6 +250,7 @@ li {
   font-weight: 600;
   line-height: 30px;
   padding: 0 10px;
+  
 }
 .login li:hover {
   cursor: pointer;
@@ -273,6 +302,7 @@ li {
   padding: 22px 0 23px;
   display: flex;
   position: relative;
+  cursor: pointer;
 }
 .logo {
   max-width: 298px;
@@ -394,6 +424,6 @@ li {
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
-  display: none ;
+  display: none;
 }
 </style>
