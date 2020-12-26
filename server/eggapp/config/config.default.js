@@ -21,14 +21,14 @@ module.exports = appInfo => {
   }
   };
   config.cors = {
-<<<<<<< HEAD
+// <<<<<<< HEAD
   // origin: 'http://192.168.2.113:8081',
   origin: 'http://192.168.50.199:8080',
-=======
+// =======
   // origin: 'http://localhost:8081',
   // origin: 'http://192.168.50.199:8080',
-  origin: 'http://192.168.2.165:8080',  //ws
->>>>>>> aae6ed17e1aa1f35c4da29aeac4f85dd3e7eabdb
+  // origin: 'http://192.168.2.165:8080',  //ws
+// >>>>>>> aae6ed17e1aa1f35c4da29aeac4f85dd3e7eabdb
   credentials: true
   };
   config.multipart = {
