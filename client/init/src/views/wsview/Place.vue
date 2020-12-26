@@ -44,7 +44,8 @@ export default {
   },
   mounted(){
       var url = "/place";
-      this.$axios(url).then((res) => {
+        this.$axios(url).then((res) => {
+        console.log(666666);
         this.placearr = res.data;
       });
   }
@@ -58,7 +59,7 @@ export default {
   padding: 0;
 }
 img {
-  width: 1920px;
+  width:100%;
   height: 380px;
 }
 .hottext {

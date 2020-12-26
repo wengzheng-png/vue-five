@@ -28,27 +28,27 @@
            <div class="intedian">
                 <h1>酒店特点</h1>
                 <div class="part">
-                <router-link tag="div" class="hpic" to="#">
+                <router-link tag="div" class="hpic" to="/hotelinfo?id=1">
                     <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3683069277,1725156816&fm=26&gp=0.jpg" alt="">
                     <h3>豪华酒店</h3>
                 </router-link>
-                <router-link tag="div" class="hpic" to="#">
+                <router-link tag="div" class="hpic" to="/hotelinfo?id=2">
                     <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1836954608,2055496952&fm=26&gp=0.jpg" alt="">
                     <h3>活动集会</h3>
                 </router-link>
-                <router-link tag="div" class="hpic" to="#">
+                <router-link tag="div" class="hpic" to="/hotelinfo?id=3">
                     <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2593181418,1792937564&fm=26&gp=0.jpg" alt="">
                     <h3>温馨情侣</h3>
                 </router-link>
-                <router-link tag="div" class="hpic" to="#">
+                <router-link tag="div" class="hpic" to="/hotelinfo?id=4">
                     <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3635067912,1771140903&fm=26&gp=0.jpg" alt="">
                     <h3>商务酒店</h3>
                 </router-link>
-                <router-link tag="div" class="hpic" to="#">
+                <router-link tag="div" class="hpic" to="/hotelinfo?id=5">
                     <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=275735347,1572509020&fm=26&gp=0.jpg" alt="">
                     <h3>休闲度假</h3>
                 </router-link>
-                <router-link tag="div" class="hpic" to="#">
+                <router-link tag="div" class="hpic" to="/hotelinfo?id=6">
                     <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1863211615,922892850&fm=26&gp=0.jpg" alt="">
                     <h3>异国主题</h3>
                 </router-link>
@@ -60,7 +60,7 @@
       <div class="hot">
           <h1>热门酒店</h1>
           <div class="inhot"> 
-                <router-link to="#" class="linkhot" tag="div" v-for="(el,index) in partarr" :key="index">
+                <router-link :to="'/hotelinfo?id=1'+index" class="linkhot" tag="div" v-for="(el,index) in partarr" :key="index">
                                <img :src="el.img" alt="">
                                <div class="inlink">
                                     <span class="title">{{el.title2}}</span><br>

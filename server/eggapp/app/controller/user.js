@@ -42,6 +42,7 @@ class UserController extends Controller {
      if(res[0]){
       //  登录成功的话  缓存用户账号，也可以缓存用户id  这里缓存的是用户账号
       this.ctx.session.tel = this.ctx.request.body.tel;
+      this.ctx.session.userid = res[0].id;
       // console.log(this.ctx.session.tel,888888888);
       this.ctx.body = {code:"2003",info:"登录成功！"};
      }else {

@@ -20,17 +20,45 @@ module.exports = appInfo => {
   database:'vuebase'
   }
   };
+
+ /*  config.security = {
+    domainWhiteList:['.http://192.168.2.17:8080'],  // 安全白名单，以 . 开头
+  }; */
+  
+  //允许跨域
   config.cors = {
+<<<<<<< HEAD
   origin: 'http://192.168.43.30:8080',
   allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
   credentials:true
   // origin: 'http://localhost:8081',
   // origin: 'http://192.168.50.199:8080',
   // origin: 'http://192.168.2.165:8080',  //ws
+=======
+  origin: 'http://192.168.43.62:8081',
+  //credentials:true
+  //allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  // origin: 'http://localhost:8081',
+  // origin: 'http://192.168.50.199:8080',
+  //origin: 'http://192.168.2.165:8080',  //ws
+
+  //origin: 'http://192.168.43.30:8080',
+
+  // origin: 'http://192.168.2.113:8081',
+  //origin: 'http://192.168.50.199:8080',
+
+  // origin: 'http://localhost:8081',
+  // origin: 'http://192.168.50.199:8080',
+  // origin: 'http://192.168.2.165:8080', 
+  credentials: true
+>>>>>>> deca12b58da8603b00384d5749f35ecf3f16881a
   };
+
+  //允许上传文件
   config.multipart = {
   mode: 'file',
    };
+<<<<<<< HEAD
    
    //关闭post的安全验证
   config.security = {
@@ -38,6 +66,10 @@ module.exports = appInfo => {
       enable: false
     }
   }
+=======
+
+  
+>>>>>>> deca12b58da8603b00384d5749f35ecf3f16881a
    //关闭csrf
    config.security={
     csrf:{
@@ -61,9 +93,6 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
-  config.multipart = {
-  mode: 'file',
-   };
 
   return {
     ...config,

@@ -30,6 +30,23 @@ async showask(uid) {
 
 }
 
+async askpic(uid) {
+
+     const sql=`select * from wzpic`
+     const data = await this.app.mysql.query(sql);
+     return data;
+
+}
+
+
+async getpic(uid) {
+
+     const sql=`select * from wzpic where wid = ${uid}`
+     const data = await this.app.mysql.query(sql);
+     return data;
+
+}
+
 
 }
 module.exports = wzService;

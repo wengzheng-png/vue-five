@@ -17,7 +17,7 @@
 
     <div class="main">
       <div class="main-one">
-        <ul>
+        <ul  @click="tiaozhaun"> 
           <li><img src="http://www.ezout.cn/uploads/2020/1203/e10401b6434e8172419a56ff9fbf55bf_298x158.jpg" alt="">
                <span>【仙境女儿国】泸沽湖环湖 海螺沟 西昌卫星发射基地 螺髻山99里温泉 东方女儿国4~12人6日之旅</span>
                  <p>特惠价:3380￥起</p>
@@ -45,421 +45,237 @@
         <div class="right">
           <el-tabs v-model="activeName" @tab-click="handleClick">
             <el-tab-pane label="九寨沟" name="1">     
-              <!-- <router-link to="/show" tag="div"> -->
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
                 <div class="smallbox">
 
-                  <router-link to="/show" tag="div"> 
+                  <router-link :to="'/hotelinfo?id='+el.wid"  tag="div" v-for="el in arr1" :key="el.wid"> 
                   <div class="part" >
-                    <img src="http://www.ezout.cn/uploads/2019/0115/4251096c8ac0deb399ac23a0fd7787ef_224x119.jpg" alt="" srcset="" />
-                    <span class="title" >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落花湖4~6人6日之旅</span>
+                    <img :src="el.wpc1" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
                     <div class="price">
                       <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
                     </div>
                   </div>
                   </router-link>
-                  
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/f0aaa2186850b39d49ee7f5a8abba632_224x119.jpg" alt="" srcset="" />
-                    <span class="title" >【九黄甘南】九寨沟 扎尕那 毕棚沟 黄龙 九曲黄河第一湾 花湖川西环线4~6人6日之旅</span>
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/0be8ae21bc2923406080d0f73ebfc040_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【九黄毕棚】毕棚沟 浮云牧场 九寨沟 黄龙 网红打卡鹧鸪山4~6人4日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/74e5b315040c12233a89c5583345b100_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【九寨涅槃】九寨沟 黄龙 都江堰 松坪沟 熊猫基地 叠溪海子 牟尼沟4~6人3日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/bbfb8e183290117986d86622ff452d82_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【九黄黑毕】九寨沟 达古冰川 毕棚沟 鹧鸪山滑雪 黄龙4~12人5日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/0ef2b8d2f6fafd9e9a21321297e36aba_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【九黄环线】九寨沟 花湖 九曲黄河第一湾 黄龙 达古冰川 毕棚沟 川西环线4~12人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
                 </div>
               <!-- </router-link> -->
             </el-tab-pane>
-            <el-tab-pane label="稻城亚丁" name="2">      <router-link to="#" tag="div">
+             <el-tab-pane label="稻城亚丁" name="2">     
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
                 <div class="smallbox">
+
+                  <router-link :to="'/hotelinfo?id='+el.wid"  tag="div" v-for="el in arr1" :key="el.wid"> 
                   <div class="part" >
-                    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1999648822,3390537001&fm=26&gp=0.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
+                    <img :src="el.wpc2" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
                     <div class="price">
                       <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
                     </div>
                   </div>
-                  <div class="part">
-                    <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2774956471,3666891912&fm=26&gp=0.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2415656262,341207431&fm=26&gp=0.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=834654462,3897377310&fm=26&gp=0.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2517400202,3154406075&fm=26&gp=0.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1238323726,2429411175&fm=26&gp=0.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                </div>
-              </router-link></el-tab-pane>
-            <el-tab-pane label="318川藏线" name="3">      <router-link to="#" tag="div">
+                  </router-link>
+                </div>318川藏线 色达 冷嘎措 峨眉山
+              <!-- </router-link> -->
+            </el-tab-pane>
+
+           <el-tab-pane label="318川藏线" name="3">     
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
                 <div class="smallbox">
+
+                  <router-link :to="'/hotelinfo?id='+el.wid"  tag="div" v-for="el in arr1" :key="el.wid"> 
                   <div class="part" >
-                    <img src="http://www.ezout.cn/uploads/2019/0115/4251096c8ac0deb399ac23a0fd7787ef_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
+                    <img :src="el.wpc3" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
                     <div class="price">
                       <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
                     </div>
                   </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/f0aaa2186850b39d49ee7f5a8abba632_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/0be8ae21bc2923406080d0f73ebfc040_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/74e5b315040c12233a89c5583345b100_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/bbfb8e183290117986d86622ff452d82_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/0ef2b8d2f6fafd9e9a21321297e36aba_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
+                  </router-link>
                 </div>
-              </router-link></el-tab-pane>
-            <el-tab-pane label="色达" name="4">      <router-link to="#" tag="div">
+              <!-- </router-link> -->
+            </el-tab-pane>
+
+              <el-tab-pane label="色达" name="4">     
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
                 <div class="smallbox">
+
+                  <router-link :to="'/hotelinfo?id='+el.wid"  tag="div" v-for="el in arr1" :key="el.wid"> 
                   <div class="part" >
-                    <img src="http://www.ezout.cn/uploads/2019/0115/4251096c8ac0deb399ac23a0fd7787ef_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
+                    <img :src="el.wpc4" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
                     <div class="price">
                       <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
                     </div>
                   </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/f0aaa2186850b39d49ee7f5a8abba632_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/0be8ae21bc2923406080d0f73ebfc040_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/74e5b315040c12233a89c5583345b100_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/bbfb8e183290117986d86622ff452d82_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/0ef2b8d2f6fafd9e9a21321297e36aba_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
+                  </router-link>
                 </div>
-              </router-link></el-tab-pane>
-            <el-tab-pane label="冷嘎措" name="5">      <router-link to="#" tag="div">
+              <!-- </router-link> -->
+            </el-tab-pane>
+
+             <el-tab-pane label="冷嘎措" name="5">     
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
                 <div class="smallbox">
+
+                  <router-link :to="'/hotelinfo?id='+el.wid"  tag="div" v-for="el in arr1" :key="el.wid"> 
                   <div class="part" >
-                    <img src="http://www.ezout.cn/uploads/2019/0115/4251096c8ac0deb399ac23a0fd7787ef_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
+                    <img :src="el.wpc5" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
                     <div class="price">
                       <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
                     </div>
                   </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/f0aaa2186850b39d49ee7f5a8abba632_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/0be8ae21bc2923406080d0f73ebfc040_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/74e5b315040c12233a89c5583345b100_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/bbfb8e183290117986d86622ff452d82_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/0ef2b8d2f6fafd9e9a21321297e36aba_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
+                  </router-link>
                 </div>
-              </router-link></el-tab-pane>
-            <el-tab-pane label="峨眉山" name="6">      <router-link to="#" tag="div">
+              <!-- </router-link> -->
+            </el-tab-pane>
+
+              <el-tab-pane label="峨眉山" name="6">     
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
                 <div class="smallbox">
+
+                  <router-link :to="'/hotelinfo?id='+el.wid"  tag="div" v-for="el in arr1" :key="el.wid"> 
                   <div class="part" >
-                    <img src="http://www.ezout.cn/uploads/2019/0115/4251096c8ac0deb399ac23a0fd7787ef_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
+                    <img :src="el.wpc6" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
                     <div class="price">
                       <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
                     </div>
                   </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/f0aaa2186850b39d49ee7f5a8abba632_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/0be8ae21bc2923406080d0f73ebfc040_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/74e5b315040c12233a89c5583345b100_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/bbfb8e183290117986d86622ff452d82_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
-                  <div class="part">
-                    <img src="http://www.ezout.cn/uploads/2019/0115/0ef2b8d2f6fafd9e9a21321297e36aba_224x119.jpg" alt="" srcset="" />
-                    <span class="title"
-                      >【行色九黄】色达 九寨沟 黄龙 九曲黄河第一湾日落
-                      花湖4~6人6日之旅</span
-                    >
-                    <div class="price">
-                      <span class="spanl">100% 满意</span>
-                      <span class="spanr">￥3380</span>
-                    </div>
-                  </div>
+                  </router-link>
                 </div>
-              </router-link></el-tab-pane>
+              <!-- </router-link> -->
+            </el-tab-pane>
+
+            
+          
+
+          </el-tabs>
+        </div>
+      </div>
+
+
+       <div class="main-two">
+        <div class="left">
+           <h1>西藏</h1>
+           <img src="http://www.ezout.cn/uploads/2019/0115/d69bc5a2877dfeeb2a2f1302c119f631_224x410.jpg" alt="">
+        </div>
+        <div class="right">
+          <el-tabs v-model="activeName2" @tab-click="handleClick">
+            <el-tab-pane label="拉萨" name="7">     
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
+                <div class="smallbox">
+
+                  <router-link :to="'/hotelinfo?id='+el.wid" tag="div" v-for="el in arr2" :key="el.wid"> 
+                  <div class="part" >
+                    <img :src="el.wpc1" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
+                    <div class="price">
+                      <span class="spanl">100% 满意</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
+                    </div>
+                  </div>
+                  </router-link>
+                </div>
+              <!-- </router-link> -->
+            </el-tab-pane>
+             <el-tab-pane label="灵芝" name="2">     
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
+                <div class="smallbox">
+
+                  <router-link :to="'/hotelinfo?id='+el.wid"  tag="div" v-for="el in arr2" :key="el.wid"> 
+                  <div class="part" >
+                    <img :src="el.wpc2" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
+                    <div class="price">
+                      <span class="spanl">100% 满意</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
+                    </div>
+                  </div>
+                  </router-link>
+                </div>
+              <!-- </router-link> -->
+            </el-tab-pane>
+
+           <el-tab-pane label="纳木措" name="3">     
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
+                <div class="smallbox">
+
+                  <router-link :to="'/hotelinfo?id='+el.wid"  tag="div" v-for="el in arr2" :key="el.wid"> 
+                  <div class="part" >
+                    <img :src="el.wpc3" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
+                    <div class="price">
+                      <span class="spanl">100% 满意</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
+                    </div>
+                  </div>
+                  </router-link>
+                </div>
+              <!-- </router-link> -->
+            </el-tab-pane>
+
+              <el-tab-pane label="珠峰" name="4">     
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
+                <div class="smallbox">
+
+                  <router-link :to="'/hotelinfo?id='+el.wid"  tag="div" v-for="el in arr2" :key="el.wid"> 
+                  <div class="part" >
+                    <img :src="el.wpc4" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
+                    <div class="price">
+                      <span class="spanl">100% 满意</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
+                    </div>
+                  </div>
+                  </router-link>
+                </div>
+              <!-- </router-link> -->
+            </el-tab-pane>
+
+             <el-tab-pane label="米堆冰川" name="5">     
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
+                <div class="smallbox">
+
+                  <router-link :to="'/hotelinfo?id='+el.wid"  tag="div" v-for="el in arr2" :key="el.wid"> 
+                  <div class="part" >
+                    <img :src="el.wpc5" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
+                    <div class="price">
+                      <span class="spanl">100% 满意</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
+                    </div>
+                  </div>
+                  </router-link>
+                </div>
+              <!-- </router-link> -->
+            </el-tab-pane>
+
+              <el-tab-pane label="波密" name="6">     
+              <!-- <router-link :to="'/hotelinfo?id='+el.wid"  tag="div"> -->
+                <div class="smallbox">
+
+                  <router-link :to="'/hotelinfo?id='+el.wid"  tag="div" v-for="el in arr2" :key="el.wid"> 
+                  <div class="part" >
+                    <img :src="el.wpc6" alt="" srcset="" />
+                    <span class="title" >{{el.wtitle}}</span>
+                    <div class="price">
+                      <span class="spanl">100% 满意</span>
+                      <span class="spanr">￥{{el.wprice}}</span>
+                    </div>
+                  </div>
+                  </router-link>
+                </div>
+              <!-- </router-link> -->
+            </el-tab-pane>
+
+            
+          
+
           </el-tabs>
         </div>
       </div>
@@ -477,15 +293,25 @@ export default {
     return {
       activeName:"1",
       activeName2:"7",
-       activeName3:"1",
-       activeName4:"1",
-       activeName5:"1",
+       arr1:[],
+       arr2:[],
     };
   },
   methods: {
     handleClick(tab, event) {
-      console.log(tab, event);
+      // console.log(tab, event);
     },
+    tiaozhaun(){
+      this.$router.push("/hotelinfo?id=5")
+    }
+  },
+  mounted() {
+     this.$axios("/askpic").then((res)=>{
+      //  console.log(res.data)
+       var arr=res.data
+        this.arr1 = arr.slice(0,6) 
+         this.arr2 = arr.slice(6,13)  
+      })
   },
 };
 </script>
@@ -500,9 +326,9 @@ export default {
 }
 .main {
   width: 1200px;
-  height: 900px;
+  height: 1360px;
   margin: 10px auto;
-  background: aqua;
+  // background: aqua;
 }
 .main-one {
   width: 100%;
@@ -553,7 +379,7 @@ export default {
 .main-two {
   width: 100%;
   height: 500px;
-  background-color: tomato;
+  // background-color: tomato;
   display: flex;
   justify-content: space-between;
   margin: 15px 0px;
@@ -561,7 +387,7 @@ export default {
 .main-two .left {
   width: 25%;
   height: 100%;
-  background-color: violet;
+  // background-color: violet;
   img{
     width: 100%;
     height: 82%;
@@ -571,7 +397,7 @@ export default {
 .main-two .right {
   width: 74%;
   height: 100%;
-  background-color: violet;
+  // background-color: violet;
 }
 .clean {
   clear: both;
@@ -583,6 +409,7 @@ export default {
   text-align: center;
   overflow: hidden;
   margin-top: 3px;
+  border: 1px solid #ccc;
   img {
     width: 100%;
     height: 120px;
@@ -604,12 +431,12 @@ export default {
     display: inline-block;
     width: 87%;
     height: 45px;
-    background-color: royalblue;
+    // background-color: royalblue;
     .spanl {
       position: relative;
       bottom: -21px;
       left: -24px;
-      color: #999;
+      color: #888;
     }
     .spanr {
       position: relative;
@@ -626,6 +453,7 @@ export default {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    border: 1px solid lightgray;
     
 }
 

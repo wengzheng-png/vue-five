@@ -12,6 +12,25 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: "/loginrj",
+    //components:()=>import('../views/rqview/Login.vue'),
+    component:()=>import ("@/views/rqview/Login.vue")
+  },{
+    path: "/personinfo",//个人信息
+    component:()=>import ("@/views/rqview/Personinfo.vue")
+  },{
+    path: "/light",//景点
+    component:()=>import ("@/views/rqview/Light.vue")
+  },{
+    path: "/xiangqing",//景点详情
+    //components:()=>import('../views/rqview/Login.vue'),
+    component:()=>import ("@/views/rqview/Xiangqing.vue")
+
+  },{
+    path: "/cont",
+    component:()=>import ("@/components/rqcomponents/Con1.vue")
+  },
+{
     path:"/",
     name:Home,
     component: Home,
@@ -124,6 +143,11 @@ const routes = [
       path: '/walkthrough1',
       component: ()=>import("../views/zmview/WalkthroughDetails1.vue"),
      },
+<<<<<<< HEAD
+=======
+
+  // },
+>>>>>>> deca12b58da8603b00384d5749f35ecf3f16881a
   // 注册
   {
     path: '/register',
@@ -151,7 +175,10 @@ const routes = [
     component: () => import('@/views/wsview/Toplace.vue')
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> deca12b58da8603b00384d5749f35ecf3f16881a
 ]
   
 
