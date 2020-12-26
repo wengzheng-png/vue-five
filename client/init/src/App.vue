@@ -6,15 +6,14 @@
     </div>
 
     <!-- 中部路由 -->
-    <div class="middle">
+    <!-- <div class="middle"> -->
     <router-view />
-    </div>
+    <!-- </div> -->
 
     <!-- 底部公共组件 -->
     <Bottom></Bottom>
   </div>
 </template>
-
 <script>
 import Top from "@/components/zmcomponents/Top.vue";
 import Bottom from "@/components/zmcomponents/Bottom.vue";

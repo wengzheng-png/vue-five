@@ -27,8 +27,8 @@
         <!-- 登录注册 -->
         <ul class="login">
           <li>个人中心</li>
-          <li>登录</li>
-          <li>免费注册</li>
+          <li><router-link to="/login">登录</router-link></li>
+          <li><router-link to="/register">免费注册</router-link></li>
           <li class="el-icon-search">订单详情</li>
           <li class="el-icon-menu daohang">
             网站导航
@@ -95,6 +95,7 @@
     <!-- 顶部第二个导航栏 -->
     <div class="daohanglan">
       <div class="daohanglan_box" @click="shouye">
+<<<<<<< HEAD
         <router-link
           to="/"
           class="daohang_items"
@@ -134,6 +135,18 @@
           >景点门票
           <div class="daosanjia_none"></div
         ></router-link>
+=======
+        <router-link to="#?"  class="daohang_items" style="backgroundColor:#0a56bb">首页<div class="daosanjia_none" style="display: block"></div></router-link>
+        <router-link to="/he"  class="daohang_items">活动<div class="daosanjia_none"></div></router-link>
+        <router-link to="themetour?"  class="daohang_items">主题游<div class="daosanjia_none"></div></router-link>
+        <router-link to="#?"  class="daohang_items">私人订制<div class="daosanjia_none"></div></router-link>
+        <router-link to="/place"  class="daohang_items">目的地<div class="daosanjia_none"></div></router-link>
+        <router-link to="/gonglue"  class="daohang_items">攻略<div class="daosanjia_none"></div></router-link>
+        <router-link to="/notes"  class="daohang_items">游记<div class="daosanjia_none"></div></router-link>
+        <router-link to="/hotel"  class="daohang_items">酒店代购<div class="daosanjia_none"></div></router-link>
+        <router-link to="#?"  class="daohang_items">景点门票<div class="daosanjia_none"></div></router-link>
+        <router-link to="/drivecar"  class="daohang_items">租车自驾<div class="daosanjia_none"></div></router-link>
+>>>>>>> aae6ed17e1aa1f35c4da29aeac4f85dd3e7eabdb
       </div>
     </div>
   </div>
