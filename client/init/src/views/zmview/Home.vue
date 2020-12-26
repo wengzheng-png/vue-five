@@ -3,7 +3,7 @@
     <!-- 顶部轮播图 -->
     <div class="block">
       <el-carousel height="420px" :interval="5000">
-        <el-carousel-item v-for="item in arr" :key="item">
+        <el-carousel-item v-for="item in arr" :key="item.id">
           <router-link :to="item.url">
             <img :src="item.img" alt="" class="img_big" />
           </router-link>
@@ -353,11 +353,11 @@ export default {
       com: "ZuiJingGongLue",
       /* 注册组件 */
       arr: [
-        { img: img1, url: "/#?九寨沟" },
-        { img: img2, url: "九寨沟" },
-        { img: img3, url: "九寨沟" },
-        { img: img4, url: "九寨沟" },
-        { img: img5, url: "九寨沟" },
+        { img: img1,id:1, url: "/#?九寨沟" },
+        { img: img2,id:2, url: "九寨沟" },
+        { img: img3,id:3, url: "九寨沟" },
+        { img: img4,id:4, url: "九寨沟" },
+        { img: img5,id:5, url: "九寨沟" },
       ],
       /* 活动 */
       arr1: [],
@@ -588,7 +588,8 @@ export default {
 
 .block,
 .img_big {
-  width: 1900px;
+  /* width: 1200px; */
+  width: 100%;
   height: 420px;
   margin: 0 auto;
 }
@@ -749,7 +750,7 @@ export default {
   text-decoration: none;
   color: #333;
   width: 280px;
-  margin: 10px;
+  margin: 30px 60px;
 }
 .youji_img1 {
   width: 100%;
