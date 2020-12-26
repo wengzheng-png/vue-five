@@ -19,5 +19,12 @@ module.exports = app => {
   router.get('/hotel', controller.zmhome.hotel);//酒店模块的商品 
   /* 门票 */
   router.get('/piao', controller.zmhome.piao);//门票模块的商品 
+
+  router.get('/askpic', controller.wzhome.askpic);//活动数据
+
+  router.get('/getpic', controller.wzhome.getpic);//预定页面的请求数据
+
+  router.get('/*', controller.wzhome.redir);//上线重定向
  
+  
 };
