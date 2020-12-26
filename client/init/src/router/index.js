@@ -15,7 +15,6 @@ const routes = [
     path:"/",
     name:Home,
     component: Home,
-<<<<<<< HEAD
    },
    {
     path: "/themetour",//主题游
@@ -81,9 +80,11 @@ const routes = [
       path: "/drivecar",//租车自驾
       component: () => import("@/views/yrview/DriveCar.vue")
     },
+    {
+      path:"/carorder",//租车详情
+      component: () => import("@/views/yrview/CarOrder.vue")
+    },
    /* gonglue 攻略 */
-=======
-  },
     {
       path:"/notes",
       component:()=>import("../views/wzview/Note.vue"),
@@ -106,7 +107,6 @@ const routes = [
       path:"/hotelinfo",
       component:()=>import("../views/wzview/Hotelinfo.vue")
     },
->>>>>>> da6ce5059984f3927cb6db86ed96d9480bb6a4ca
    {
     path:'/gonglue',
     component: ()=>import("../views/zmview/Gonglue.vue"),

@@ -20,5 +20,15 @@ class HomeService extends Service {
         const data = await this.app.mysql.query(sql);
         return data;
     }
+    async drivecar(arg){
+        const sql = `select * from drivecar where leixing = "${arg}"`;
+        const data = await this.app.mysql.query(sql);
+        return data;
+    }
+    async drivedetal(arg){
+        const sql = `select * from drivecar where leixing = "${arg}"`;
+        const data = await this.app.mysql.query(sql);
+        return data;
+    }
 }
 module.exports = HomeService

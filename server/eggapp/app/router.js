@@ -34,4 +34,6 @@ module.exports = app => {
 	router.get('/getVerif', controller.yrhome.getVerif);//验证码
 	router.post('/orderquery', controller.yrhome.orderQuery);//订单查询
 	router.post('/myorder', controller.yrhome.myorder);//我的订单
+	router.post('/drive', controller.yrhome.drivecar);//租车
+	router.post('/drivedetal', controller.yrhome.drivedetal);//租车详情
 };

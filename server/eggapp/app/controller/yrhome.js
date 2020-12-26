@@ -59,9 +59,28 @@ class HomeController extends Controller {
 	// 我的订单
 	async myorder() {
 		const { ctx } = this;
-		console.log(this.ctx.session.phone);
+		// console.log(this.ctx.session.phone);
 		var re = await this.ctx.service.yrhome.myorder(this.ctx.session.phone)
 		ctx.body = re
+	}
+	// 租车
+	async drivecar(){
+		const {ctx} = this;
+		var re = await this.ctx.service.yrhome.drivecar(this.ctx.request.body.leixing)
+		// console.log(re);
+		this.ctx.session.leixing = this.ctx.request.body.leixing
+		var cartype = this.ctx.session.leixing
+		if(re[0]){
+			ctx.body = {leixing:cartype,code:2004,info:"查询存在"}
+		}else{
+			ctx.body = {code:4004,info:"查询失败"}
+		}
+	}
+	// 租车详情
+	async drivedetal(){
+		var re = await this.ctx.service.yrhome.drivedetal(this.ctx.session.leixing)
+		this.ctx.body = re
+
 	}
 }
 
