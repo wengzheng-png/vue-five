@@ -143,11 +143,8 @@ const routes = [
       path: '/walkthrough1',
       component: ()=>import("../views/zmview/WalkthroughDetails1.vue"),
      },
-<<<<<<< HEAD
-=======
 
   // },
->>>>>>> deca12b58da8603b00384d5749f35ecf3f16881a
   // 注册
   {
     path: '/register',
@@ -175,10 +172,6 @@ const routes = [
     component: () => import('@/views/wsview/Toplace.vue')
   }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> deca12b58da8603b00384d5749f35ecf3f16881a
 ]
   
 

@@ -99,11 +99,7 @@
         <router-link to="/"  class="daohang_items" style="backgroundColor:#0a56bb">首页<div class="daosanjia_none" style="display: block"></div></router-link>
         <router-link to="/he"  class="daohang_items">活动<div class="daosanjia_none"></div></router-link>
         <router-link to="themetour?"  class="daohang_items">主题游<div class="daosanjia_none"></div></router-link>
-<<<<<<< HEAD
-        <router-link to="#?"  class="daohang_items">私人订制<div class="daosanjia_none"></div></router-link>
-=======
         <router-link to="show?aid=2"  class="daohang_items">私人订制<div class="daosanjia_none"></div></router-link>
->>>>>>> deca12b58da8603b00384d5749f35ecf3f16881a
         <router-link to="/place"  class="daohang_items">目的地<div class="daosanjia_none"></div></router-link>
         <router-link to="/gonglue"  class="daohang_items">攻略<div class="daosanjia_none"></div></router-link>
         <router-link to="/notes"  class="daohang_items">游记<div class="daosanjia_none"></div></router-link>

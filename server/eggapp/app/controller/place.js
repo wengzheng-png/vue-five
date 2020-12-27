@@ -6,20 +6,20 @@ class PlaceController extends Controller {
   async place() {
     const { ctx } = this;
     // 查询从第3开始返回8条数据
-    const sql=`select * from place limit 2,8;`
+    const sql=`select * from place limit 2,9;`
     const data = await this.app.mysql.query(sql);
     this.ctx.body = data;
   }
 
 
-  // 搜索框请求
+  // 去哪儿
   async search() {
     const { ctx } = this;
-    // 查询从第3开始返回8条数据
-    var keyword = this.ctx.request.query.keyword;
-    const sql=`select * from place WHERE name LIKE '%${keyword}%'`
+    var placeid = this.ctx.request.query;
+    const sql=`select * from place WHERE id=${placeid.id}`
     const data = await this.app.mysql.query(sql);
     this.ctx.body = data;
   }
+
 }
 module.exports = PlaceController;
