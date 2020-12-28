@@ -16,7 +16,7 @@ module.exports = appInfo => {
   host:'localhost',
   port:'3306',
   user:'root',
-  password:'123456',
+  password:'root',
   database:'vuebase'
   }
   };
@@ -27,15 +27,7 @@ module.exports = appInfo => {
   
   //允许跨域
   config.cors = {
-<<<<<<< HEAD
-  origin: 'http://192.168.43.30:8080',
-  allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
-  credentials:true
-  // origin: 'http://localhost:8081',
-  // origin: 'http://192.168.50.199:8080',
-  // origin: 'http://192.168.2.165:8080',  //ws
-=======
-  origin: 'http://192.168.43.62:8081',
+   origin: 'http://127.0.0.1:8081',
   //credentials:true
   //allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   // origin: 'http://localhost:8081',
@@ -51,14 +43,12 @@ module.exports = appInfo => {
   // origin: 'http://192.168.50.199:8080',
   // origin: 'http://192.168.2.165:8080', 
   credentials: true
->>>>>>> deca12b58da8603b00384d5749f35ecf3f16881a
   };
 
   //允许上传文件
   config.multipart = {
   mode: 'file',
    };
-<<<<<<< HEAD
    
    //关闭post的安全验证
   config.security = {
@@ -66,10 +56,6 @@ module.exports = appInfo => {
       enable: false
     }
   }
-=======
-
-  
->>>>>>> deca12b58da8603b00384d5749f35ecf3f16881a
    //关闭csrf
    config.security={
     csrf:{

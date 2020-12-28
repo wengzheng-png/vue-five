@@ -21,6 +21,7 @@
       </div> 
     </div>
   </div>
+  
 </template>
 
 <script>
@@ -29,7 +30,7 @@ export default {
   data() {
     return {
       imgurl: " ",
-      placearr:[]
+      placearr:[],
     };
   },
   components: {
@@ -45,8 +46,8 @@ export default {
   mounted(){
       var url = "/place";
         this.$axios(url).then((res) => {
-        console.log(666666);
         this.placearr = res.data;
+        console.log(res.data);
       });
   }
 

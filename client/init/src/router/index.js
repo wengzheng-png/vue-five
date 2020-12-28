@@ -12,6 +12,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path:"/",
+    name:Home,
+    component: Home,
+   },
+  {
     path: "/loginrj",
     //components:()=>import('../views/rqview/Login.vue'),
     component:()=>import ("@/views/rqview/Login.vue")
@@ -30,11 +35,6 @@ const routes = [
     path: "/cont",
     component:()=>import ("@/components/rqcomponents/Con1.vue")
   },
-{
-    path:"/",
-    name:Home,
-    component: Home,
-   },
    /* 攻略 */
    {
     path: "/themetour",//主题游
@@ -143,11 +143,8 @@ const routes = [
       path: '/walkthrough1',
       component: ()=>import("../views/zmview/WalkthroughDetails1.vue"),
      },
-<<<<<<< HEAD
-=======
 
   // },
->>>>>>> deca12b58da8603b00384d5749f35ecf3f16881a
   // 注册
   {
     path: '/register',
@@ -175,10 +172,7 @@ const routes = [
     component: () => import('@/views/wsview/Toplace.vue')
   }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> deca12b58da8603b00384d5749f35ecf3f16881a
 ]
   
 
