@@ -32,7 +32,7 @@ module.exports = appInfo => {
   //allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   // origin: 'http://localhost:8081',
   // origin: 'http://192.168.50.199:8080',
-  //origin: 'http://192.168.2.165:8080',  //ws
+  // origin: 'http://192.168.43.94:8080',  //ws
 
   //origin: 'http://192.168.43.30:8080',
 

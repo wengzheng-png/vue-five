@@ -17,19 +17,6 @@ export default {
   methods:{
     fn(){
       this.$router.push("/toplace")
-      var url = "/search";
-      this.$axios(url,{params:{keyword:this.keyword}})
-      .then((res) => {
-          // 后端返回的数据显示
-          var name = res.data[0].name
-          var img = res.data[0].img
-          var text = res.data[0].text
-          // 缓存对应的数据
-          localStorage.setItem("name",name)
-          localStorage.setItem("img",img)
-          localStorage.setItem("text",text)
-
-      });
     }
   }
     

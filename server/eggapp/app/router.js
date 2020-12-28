@@ -5,7 +5,16 @@
  */
 module.exports = app => {
   const { router, controller } = app;
+
+  //项目所需的接口
+  router.post('/register', controller.user.register);  //注册
+  router.get('/verif', controller.user.verif);      //验证码
+  router.post('/login', controller.user.login);   //登陆
+  router.post('/forgetpwd', controller.user.forgetpwd);  //忘记密码
   router.get('/place', controller.place.place);   //目的地
+  router.get('/search', controller.place.search);   //搜索去哪儿
+
+  //router.get('/homegoods', controller.home.homegoods);//首页的商品 默认50条
 
   router.get('/personinfo', controller.personr.personinfo);//个人中心 
   
@@ -40,13 +49,13 @@ module.exports = app => {
   //项目所需的接口
   
   
-  //项目所需的接口
-  router.post('/register', controller.user.register);  //注册
-  router.get('/verif', controller.user.verif);      //验证码
-  router.post('/login', controller.user.login);   //登陆
-  router.post('/forgetpwd', controller.user.forgetpwd);  //忘记密码
-  
-  router.get('/search', controller.place.search);   //搜索去哪儿
+  // //项目所需的接口
+  // router.post('/register', controller.user.register);  //注册
+  // router.get('/verif', controller.user.verif);      //验证码
+  // router.post('/login', controller.user.login);   //登陆
+  // router.post('/forgetpwd', controller.user.forgetpwd);  //忘记密码
+  // router.get('/place', controller.place.place);   //目的地
+  // router.get('/search', controller.place.search);   //搜索去哪儿
  
   router.get('/goodsitems', controller.yrhome.goodsitems);//主题游商品
   router.get('/getVerif', controller.yrhome.getVerif);//验证码

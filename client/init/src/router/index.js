@@ -172,7 +172,6 @@ const routes = [
     component: () => import('@/views/wsview/Toplace.vue')
   }
 
-
 ]
   
 
